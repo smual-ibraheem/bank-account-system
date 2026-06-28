@@ -7,9 +7,10 @@
     <groupId>com.bank</groupId>
     <artifactId>bank-account-system</artifactId>
     <version>1.0.0</version>
+    <packaging>jar</packaging>
 
-    <name>Bank Account System</name>
-    <description>A console-based banking system built with clean Java architecture.</description>
+    <name>Bank Account System (In-Memory)</name>
+    <description>A console-based banking system built with clean Java architecture utilizing in-memory collections.</description>
 
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
@@ -25,6 +26,7 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <!-- ⚠️ لا يوجد أي مكتبات لقواعد البيانات هنا لأن المشروع يعتمد على الذاكرة المؤقتة -->
     </dependencies>
 
     <build>
@@ -46,7 +48,6 @@
                 <version>3.2.5</version>
             </plugin>
 
-            
             <!-- Run the console app with: mvn exec:java -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -55,6 +56,28 @@
                 <configuration>
                     <mainClass>bank.Main</mainClass>
                 </configuration>
+            </plugin>
+
+            <!-- Package into a single executable Fat Jar -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.2</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>bank.Main</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

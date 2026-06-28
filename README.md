@@ -1,5 +1,11 @@
 # Bank Account System
 
+> **⚠️ ARCHITECTURE EVOLUTION NOTICE: This is V1 (In-Memory Version)**
+>
+> This repository demonstrates the foundational business logic, guard clauses, and domain rules using in-memory collections. The system has since been **fully upgraded to an Enterprise-level JDBC architecture** featuring persistent SQL storage, ACID transactions, and Optimistic Locking.
+>
+> 👉 **[Click here to view V2: Enterprise Banking Core (JDBC)](https://github.com/smual-ibraheem/enterprise-banking-core-jdbc)**
+
 A console-based banking system built with Java and Maven, focusing on clean architecture, business rules, transaction validation, and audit-friendly transaction logging.
 
 ## Overview
