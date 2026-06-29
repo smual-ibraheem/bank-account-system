@@ -1,4 +1,4 @@
-# Bank Account System
+# 🏦 Bank Account System
 
 > **⚠️ ARCHITECTURE EVOLUTION NOTICE: This is V1 (In-Memory Version)**
 >
@@ -6,37 +6,49 @@
 >
 > 👉 **[Click here to view V2: Enterprise Banking Core (JDBC)](https://github.com/smual-ibraheem/enterprise-banking-core-jdbc)**
 
-A console-based banking system built with Java and Maven, focusing on clean architecture, business rules, transaction validation, and audit-friendly transaction logging.
+![Java](https://img.shields.io/badge/Java-17-blue.svg)
+![Maven](https://img.shields.io/badge/Maven-3.3-C71A36.svg)
+![JUnit 5](https://img.shields.io/badge/JUnit-5-25A162.svg)
 
-## Overview
+*A console-based banking system built with Java and Maven, focusing on clean architecture, business rules, transaction validation, and audit-friendly transaction logging.*
+
+---
+
+## 📌 Overview
 
 This project simulates a simple banking system where users can create accounts, deposit money, withdraw money, transfer funds, and view recent transactions.
 
-The main goal of the project is not only to build a working console application, but also to demonstrate clean separation of responsibilities between the user interface, business logic, validation policies, and transaction logging.
+The main goal of the project is not only to build a working console application, but also to demonstrate **clean separation of responsibilities** between the user interface, business logic, validation policies, and transaction logging.
 
-## Features
+---
 
-- Create bank accounts with unique generated IDs
-- Deposit money into accounts
-- Withdraw money from accounts
-- Transfer money between accounts
-- Reject invalid transactions with clear rejection reasons
-- Prevent negative or invalid amounts
-- Prevent accounts from being created with invalid data
-- Enforce maximum transaction amount
-- Enforce daily outgoing transaction limit
-- Keep a transaction log for successful and rejected operations
-- Show recent transactions for each account
-- Unit-tested business rules with JUnit 5
+## 🚀 Features
 
-## Tech Stack
+- ✔️ **Create bank accounts** with unique generated IDs
+- ✔️ **Deposit money** into accounts
+- ✔️ **Withdraw money** from accounts
+- ✔️ **Transfer money** between accounts
+- ✔️ **Reject invalid transactions** with clear rejection reasons
+- ✔️ **Prevent negative** or invalid amounts
+- ✔️ **Prevent accounts** from being created with invalid data
+- ✔️ **Enforce** maximum transaction amount
+- ✔️ **Enforce** daily outgoing transaction limit
+- ✔️ **Keep a transaction log** for successful and rejected operations
+- ✔️ **Show recent transactions** for each account
+- ✔️ **Unit-tested business rules** with JUnit 5
 
-- Java 17
-- Maven
-- JUnit 5
-- IntelliJ IDEA
+---
 
-## Project Structure
+## ⚙️ Tech Stack
+
+* **Java 17**
+* **Maven**
+* **JUnit 5**
+* **IntelliJ IDEA**
+
+---
+
+## 🏗️ Project Structure
 
 ```text
 src
